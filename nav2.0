@@ -1,0 +1,162 @@
+<style type="text/css">
+  html {
+    --main-bar-color: #a13702;
+    --hover-color: #602101;
+    --border-color: #602101;
+    --border-width: 1.5px;
+    --bar-transparency: 1; /*(1 - 0)*/
+  }
+  #cssmenu{
+    border:none;
+    border:0;
+    margin:0;
+    padding:0;
+    font:67.5% 'Lucida Sans Unicode','Bitstream Vera Sans','Trebuchet Unicode MS','Lucida Grande',Verdana,Helvetica,sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    width:auto;
+  }
+  #cssmenu ul{
+    background: var(--main-bar-color); /*main bar color*/
+    opacity: var(--bar-transparency);
+    height:35px;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  #cssmenu li{
+    float:left;
+    padding:0;
+  }
+  #cssmenu li a{
+    background: var(--main-bar-color); /*main bar*/
+    opacity: var(--bar-transparency);
+    display:block;
+    font-weight:normal;
+    line-height:35px;
+    margin:0;
+    padding:0 25px;
+    text-align:center;
+    text-decoration:none;
+  }
+  #cssmenu > ul > li > a{
+    color:#fff;
+  }
+  #cssmenu ul ul a{
+    color:#fff;
+  }
+  #cssmenu li > a:hover,#cssmenu ul li:hover > a{
+    background: var(--hover-color); /*hover color*/ /*url('http://1.bp.blogspot.com/-LfD4k3S234Q/UjqY7yGGUrI/AAAAAAAABeA/z3odDyDzM6Q/s1600/hover.png') bottom center no-repeat; /*up arrow icon*/
+    color:#fff;
+    text-decoration:none;
+  }
+  #cssmenu li ul{
+    background: var(--main-bar-color); /*main bar color*/
+    opacity: var(--bar-transparency);
+    display:none;
+    height:auto;
+    padding:0;
+    margin:0;
+    border:0;
+    position:absolute;
+    width:250px;
+    z-index:200;
+    /*top:1em;/*left:0;*/
+  }
+  #cssmenu li:hover ul {
+	  display: block
+  }
+  #cssmenu li li{
+    display:block;
+    float:none;
+    margin:0;
+    padding:0;
+    width:250px;
+  }
+  #cssmenu li:hover li a{
+    background:none;
+  }
+  #cssmenu li ul a{
+    display:block;
+    height:35px;
+    font-size:14px;
+    font-style:normal;
+    margin:0;
+    padding:0 10px 0 15px;
+    text-align:left;
+  }
+  #cssmenu li ul a:hover,#cssmenu li ul li:hover > a{
+    background: var(--hover-color); /*hover color*//*url('http://3.bp.blogspot.com/-GHcVUbDqaCs/UjqZZY7jHWI/AAAAAAAABeI/dTI0HyyzA7Q/s1600/hover_sub.png') center left no-repeat; /*arrow icon*/
+    border:0;
+    color:#fff;
+    text-decoration:none;
+  }
+
+  #cssmenu li ul li > ul li, #cssmenu li ul a > ul li {
+    display: none;
+  }
+
+  #cssmenu li ul a:hover > ul li,#cssmenu li ul li:hover > ul li {
+    display: inline-block;
+  }
+
+  #cssmenu li ul a:hover > ul,#cssmenu li ul li:hover > ul {
+    display: inline-block;
+    left: calc(100% + 1px);
+
+  }
+
+  #cssmenu p{
+    clear:left;
+  }
+  .has-sub ul {
+    z-index: 1000 !important;
+  }
+  .tabs-inner .widget ul {
+    max-height: 1000px;
+  }
+  ul > li > a {
+    border-color: var(--border-color) !important; /*border color*/
+  }
+  li > ul > li {
+    border: 0;
+  }
+  li > ul > li > a {
+    border: 0px !important;
+  }
+  #crosscol {
+    margin: 0; /*align bar to content*/
+  }
+  .tabs-inner .widget li:first-child a {
+    border-width: var(--border-width);
+  }
+  .tabs-inner .widget li:first-child a {
+    border-width: var(--border-width);
+  }
+  .tabs-inner .widget li a {
+    border-width: var(--border-width);
+  }
+  ul > li > ul {
+    margin-left: calc(-1 * var(--border-width));
+  }
+</style><!--<a href="http://24work.blogspot.com/" rel="dofollow" target="_blank" title="Drop Down Menus"><img src="https://bitly.com/24workpng1" alt="Drop Down Menus" border="0" style="position: fixed; bottom: 10%; right: 0%; top: 0px;" /></a><a href="http://24work.blogspot.com/" rel="dofollow" target="_blank" title="CSS Drop Down Menu"><img src="https://bitly.com/24workpng1" alt="CSS Drop Down Menu" border="0" style="position: fixed; bottom: 10%; right: 0%;" /></a><a href="http://24work.blogspot.com/" rel="dofollow" target="_blank" title="Pure CSS Dropdown Menu"><img src="https://bitly.com/24workpng1" alt="Pure CSS Dropdown Menu" border="0" style="position: fixed; bottom: 10%; left: 0%;" /></a>-->
+
+<div id="cssmenu">
+<ul>
+<li class="active"><a href="http://thefloatinglibrary.blogspot.com/"><span>Home</span></a></li>
+<li class="has-sub"><a href="#"><span>Resources</span></a>
+<ul>
+<li><a href="https://thefloatinglibrary.blogspot.com/2019/08/what-is-cawpile-rating.html"><span>What is a CAWPILE rating?</span></a></li>
+<li><a href="http://thefloatinglibrary.blogspot.com/2019/09/why-didnt-you-finish-book.html"><span>Why didn't you  finish the book?</span></a></li>
+  <li class="last"><a href="#"><span>Resources</span><ul><li>sub sub menu</li></ul></a></li>
+</ul>
+</li>
+  <li class="has-sub"><a href="#"><span>Second One</span></a>
+<ul>
+<li><a href="https://thefloatinglibrary.blogspot.com/2019/08/what-is-cawpile-rating.html"><span>What is a CAWPILE rating?</span></a></li>
+<li><a href="http://thefloatinglibrary.blogspot.com/2019/09/why-didnt-you-finish-book.html"><span>Why didn't you  finish the book?</span></a></li>
+<li class="last"><a href="#"><span>Resources</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
